@@ -4,8 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import HomePage from "./Components/HomePage";
-import Login from "./Components/Login";
-import Signup from "./Components/Signup";
+import Login from "./Components/Auth/Login";
+import Signup from "./Components/Auth/Signup";
 import About from "./Components/About";
 
 const App = () => {

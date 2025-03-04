@@ -3,38 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Navbar from "../Common/Navbar";
+import Footer from "../Common/Footer"; // Ensure this path is correct
 
 const HomePage = () => {
   return (
     <div className="wrapper">
-      <nav className="bg-gray-900 text-white sticky top-0 z-50 shadow-sm py-3">
-        <div className="container mx-auto">
-          <Link className="text-white font-bold text-3xl" to="/">
-            <i className="fa fa-rocket me-2 text-blue-500"></i>AI Resume Builder
-          </Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="flex justify-end items-center">
-              <li className="mx-2">
-                <Link className="text-white hover:text-gray-400" to="/about">About</Link>
-              </li>
-              <li className="mx-2">
-                <Link className="text-white hover:text-gray-400" to="/features">Features</Link>
-              </li>
-              <li className="mx-2">
-                <Link className="text-white hover:text-gray-400" to="/pricing">Pricing</Link>
-              </li>
-              <li className="mx-2">
-                <Link className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600" to="/login">
-                  Get Started <i className="fa fa-arrow-right ms-2"></i>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-500 to-purple-500 py-10">
@@ -197,44 +172,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-10">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div>
-              <h5 className="font-bold mb-3">AI Resume Builder</h5>
-              <p className="text-gray-400">Empowering job seekers with intelligent resume solutions since 2023</p>
-            </div>
-            <div>
-              <h6 className="font-bold mb-3">Quick Links</h6>
-              <ul className="text-gray-400">
-                <li><Link to="/about" className="text-gray-400 hover:text-white">About</Link></li>
-                <li><Link to="/features" className="text-gray-400 hover:text-white">Features</Link></li>
-                <li><Link to="/pricing" className="text-gray-400 hover:text-white">Pricing</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h6 className="font-bold mb-3">Support</h6>
-              <ul className="text-gray-400">
-                <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact Us</Link></li>
-                <li><Link to="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
-                <li><Link to="/docs" className="text-gray-400 hover:text-white">Documentation</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h6 className="font-bold mb-3">Stay Connected</h6>
-              <div className="flex justify-center">
-                <a href="#" className="text-white mx-2"><i className="fa fa-facebook"></i></a>
-                <a href="#" className="text-white mx-2"><i className="fa fa-twitter"></i></a>
-                <a href="#" className="text-white mx-2"><i className="fa fa-linkedin"></i></a>
-                <a href="#" className="text-white mx-2"><i className="fa fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-          <hr className="my-5 border-gray-700" />
-          <p className="text-center text-gray-400 mb-0">&copy; {new Date().getFullYear()} AI Resume Builder. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
